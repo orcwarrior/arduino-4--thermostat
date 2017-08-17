@@ -18,8 +18,7 @@
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
-    <OverrideVtorValue>
-    </OverrideVtorValue>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <ProgFlashFromRam>true</ProgFlashFromRam>
     <RamSnippetAddress>0x20000000</RamSnippetAddress>
@@ -86,9 +85,9 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master</Value>
       <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/ssd1306</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src</Value>
+      <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -128,9 +127,9 @@
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master</Value>
       <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/ssd1306</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src</Value>
+      <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -173,8 +172,10 @@
     </ToolchainSettings>
     <VMSETTING_IncludePaths>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src;C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/ssd1306;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/orcwa/OneDrive/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/eightanaloginputs;../../../fridge_ctrl;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
-      <VisualMicroSettings xmlns="">
+      <VisualMicroSettings>
         <vm.programmer_name>avrisp</vm.programmer_name>
+        <VM_ReCompileLibsOnSourceMacroChange>
+        </VM_ReCompileLibsOnSourceMacroChange>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -201,9 +202,9 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master</Value>
       <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/ssd1306</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src</Value>
+      <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -243,9 +244,9 @@
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master</Value>
       <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/ssd1306</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src</Value>
+      <Value>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -288,15 +289,23 @@
     </ToolchainSettings>
     <VMSETTING_IncludePaths>C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library-master;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src;C:/Users/orcwa/OneDrive/Documents/Arduino/libraries/ssd1306;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/orcwa/OneDrive/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/eightanaloginputs;../../../fridge_ctrl;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
-      <VisualMicroSettings xmlns="">
+      <VisualMicroSettings>
         <vm.programmer_name>avrisp</vm.programmer_name>
+        <VM_ReCompileLibsOnSourceMacroChange>
+        </VM_ReCompileLibsOnSourceMacroChange>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="fridge_ctrl.ino">
+    <Compile Include="22.cpp">
       <SubType>compile</SubType>
-    </None>
+    </Compile>
+    <Compile Include="22.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="fridge_ctrl.ino">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src" />
@@ -315,12 +324,6 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\printTemperature.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="test.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="test.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="__vm\.fridge_ctrl.vsarduino.h">

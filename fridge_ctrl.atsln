@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "fridge_ctrl", "fridge_ctrl.cppproj", "{8244DF25-36FB-4C85-BAF5-47FC78773A6F}"
 EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ThinkeringAround1", "..\..\..\OneDrive\Documents\Arduino\ThinkeringAround1\ThinkeringAround1.cppproj", "{9E5E2783-5FE7-4511-BB87-9CAE54B63E8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -15,6 +17,10 @@ Global
 		{8244DF25-36FB-4C85-BAF5-47FC78773A6F}.Debug|AVR.Build.0 = Debug|AVR
 		{8244DF25-36FB-4C85-BAF5-47FC78773A6F}.Release|AVR.ActiveCfg = Release|AVR
 		{8244DF25-36FB-4C85-BAF5-47FC78773A6F}.Release|AVR.Build.0 = Release|AVR
+		{9E5E2783-5FE7-4511-BB87-9CAE54B63E8F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{9E5E2783-5FE7-4511-BB87-9CAE54B63E8F}.Debug|AVR.Build.0 = Debug|AVR
+		{9E5E2783-5FE7-4511-BB87-9CAE54B63E8F}.Release|AVR.ActiveCfg = Release|AVR
+		{9E5E2783-5FE7-4511-BB87-9CAE54B63E8F}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

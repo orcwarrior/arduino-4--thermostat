@@ -1,4 +1,8 @@
-#include "test.h"
+#include "src/modules/generics/vector/vector.h"
+#include "src/modules/eventsManager/eventsManager.h"
+#include "src/modules/tempSensor/tempSensor.h"
+
+#include "src/printTemperature.h"
 #include "AM2320.h"
 #include <Adafruit_SSD1306.h>
 #include <gfxfont.h>
@@ -6,7 +10,6 @@
 
 #include <SPI.h>
 #include <Wire.h>
-#include "src/printTemperature.h"
 
 #define OLED_RESET 4
 Adafruit_SSD1306 display(OLED_RESET);
@@ -26,23 +29,6 @@ Adafruit_SSD1306 display(OLED_RESET);
 int sensorPin = A0;    // select the input pin for the potentiometer
 int ledPin = 13;      // select the pin for the LED
 int potSensorValue = 0;  // variable to store the value coming from the sensor
-static const unsigned char PROGMEM logo16_glcd_bmp[] =
-{ B00000000, B11000000,
-	B00000001, B11000000,
-	B00000001, B11000000,
-	B00000011, B11100000,
-	B11110011, B11100000,
-	B11111110, B11111000,
-	B01111110, B11111111,
-	B00110011, B10011111,
-	B00011111, B11111100,
-	B00001101, B01110000,
-	B00011011, B10100000,
-	B00111111, B11100000,
-	B00111111, B11110000,
-	B01111100, B11110000,
-	B01110000, B01110000,
-B00000000, B00110000 };
 
 #if (SSD1306_LCDHEIGHT != 32)
 #error("Height incorrect, please fix Adafruit_SSD1306.h!");
@@ -81,7 +67,7 @@ void loop() {
 	// display.setCursor(0,2);
 	// display.print(actualTemp, 1);
 	// display.print(CHAR_DEGREE); //display.print("C");
-display.clearDisplay();
+	display.clearDisplay();
 	printTemperature(display, actualTemp, 3, "SET");
 	
 	
@@ -96,7 +82,7 @@ display.clearDisplay();
 		display.setCursor(1,60);
 		display.print("reseting...");
 		digitalWrite(tempSensorPin, !sensorState);
-		delay(500);
+		delay(900);
 	}
 	if (tempSensorResponse == 2) strcpy(sensorString, "CRCERR");
 	else if (tempSensorResponse == 0) {
@@ -104,7 +90,7 @@ display.clearDisplay();
 	}
 	if (tempSensorResponse) {
 		display.setCursor(1,44);
-		display.print(sensorString); display.print(CHAR_DEGREE);
+		display.print(sensorString);
 	}
 	display.setCursor(1, 84);
 	display.print(tempSensor.h);
@@ -120,7 +106,7 @@ double getSensorTemp(int sensorRawValue) {
 	const int maxOffValue = 7; // Used 500k pot (whuut?) is quite noisy...
 	const int maxTemperature = 13 * 10 + 7; // one after decimal point precision
 	if (sensorRawValue <= maxOffValue)
-		return TEMP_OFF;
+		return -9999;
 	else
 		return  0.1 * (maxTemperature - sensorRawValue / 9);
 }
