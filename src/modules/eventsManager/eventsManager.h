@@ -9,38 +9,38 @@
 #include "WProgram.h"
 #endif
 
-class ILoopHandler {
-  public:
-  ILoopHandler(); 
-  ~ILoopHandler();
-  virtual void onLoop() = 0; // To override by deriving classes
-};		
-class ISetupHandler {
-  public:
-  ISetupHandler();
-  ~ISetupHandler();
-  virtual void onSetup() = 0; // To override by deriving classes
-};
-// Generic handler:
-class IEventHandler {
-  public:
-  IEventHandler();
-  ~IEventHandler();
-  virtual void onEvent(const char* eventName) = 0; // To override...
-  void registerToEvent(const char* eventName);
-  };
-class EventsManagerClass
-{
-  protected:
+#include "../generics/hashMap/hashMap.h"
+#include "../generics/vector/vector.h"
+#include "Event.h"
+
+#include "../delegate/delegate.h"
 
 
-  public:
-  void init();
-  void registerEventHandler();
-  void callEvent(const char* eventName, int passedData); // TODO: int, cmon
+class EventListenerData { // ListenerDelegate
+	public:
+	EventListenerData(void* listener, void (*callback)(void*));
+	const void* listener;
+	const void (*callback)(void*);
 };
 
-extern EventsManagerClass EventsManager;
+// TODO: Singleton
+class EventsManagerClass  {
+	protected:
+	// HashMap<const char*, IEventsHandler> eventHandlersMap;
+
+	public:
+	EventsManagerClass();
+	~EventsManagerClass();
+	//  void registerEventHandler(IEventsHandler handler, HandlerFunc handlerFuncPtr) {			  };
+	// Events:
+	void registerEvent(Event* e);
+	void removeEvent(Event* e);
+	void fireEvent(Event* e, void* arg=NULL);
+	
+	// EventListeners:
+	bool listen(const char* eventName); // TODO: delegate
+};
+
 
 #endif
 

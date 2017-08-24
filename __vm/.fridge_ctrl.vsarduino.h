@@ -19,8 +19,10 @@
 #define ARDUINO 10803
 #define ARDUINO_AVR_NANO
 #define ARDUINO_ARCH_AVR
+#include <Wire.h>
 //
 //
+void voidPtrCastingTest();
 double getSensorTemp(int sensorRawValue);
 
 #include "pins_arduino.h" 

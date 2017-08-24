@@ -1,0 +1,1 @@
+A Cool thing!: https://stackoverflow.com/a/18418071
